@@ -80,8 +80,10 @@ app.delete("/tasks/:id", (req, res) => {
 
 module.exports = app;
 
+const PORT = process.env.PORT || 3000;
+
 if (require.main === module) {
-  app.listen(3000, () => {
-    console.log("Server running on port 3000");
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
   });
 }
